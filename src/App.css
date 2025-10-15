@@ -1,0 +1,46 @@
+.App{
+    margin-top: 60px;
+    background-color: #33333395;
+    height: 100%;
+}
+.page-heading{
+    font-size: 32px;
+    font-family: poppins;
+}
+.sub-heading{
+    font-size: 24px;
+    font-weight: 600;
+}
+.special-heading {
+    font-weight: 700;
+    display: inline-block; 
+    padding: 0px;  
+    background-color: #fff; 
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;    */
+}
+.page-text{
+    font-size: 18px;
+}
+@media (max-width: 768px) {
+
+   .page-heading{
+    font-size: 28px;
+    
+}
+.sub-heading{
+    font-size: 24px;
+    font-weight: 600;
+}
+.special-heading {
+    font-weight: 700;
+    display: inline-block; 
+    padding: 0px;  
+    background-color: #fff; 
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;    */
+} 
+.page-text{
+    font-size: 16px;
+}
+}
