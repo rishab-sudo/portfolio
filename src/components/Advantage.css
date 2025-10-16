@@ -23,8 +23,8 @@
   font-weight: 600;
 }
 .adv-left-card {
- width: 75%;
- background-color: #f0f0f0;
+  width: 75%;
+  background-color: #f0f0f0;
   position: relative;
   height: 400px;
   display: flex;
@@ -33,17 +33,24 @@
   text-align: center;
   border-radius: 15px;
   padding: 1rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15); /* Added box shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* optional for hover effect */
+}
+
+.adv-left-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25p
 }
 
 .adv-left-small-box {
   width: 276px;
-  height: 70px;
+  height: 85px;
   position: absolute;
-  bottom: 15px; 
+  bottom: 8px; 
   right: 10%; 
   left: auto;
   transform: translateX(50%); 
-  background-color: #007bff;
+  background-color: #003366;
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 8px;
@@ -52,8 +59,7 @@
 
 /* Right Section */
 .adv-right-div {
-    
-width: 45%;
+    width: 45%;
 }
 
 .adv-heading-div h2 {
@@ -68,7 +74,6 @@ width: 45%;
 }
 
 /* Boxes Grid */
-
 .adv-boxes-div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -85,6 +90,7 @@ width: 45%;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  /* border: 1px solid #003366;; */
 }
 
 /* Mobile Responsive */

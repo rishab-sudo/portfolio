@@ -1,19 +1,68 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Container } from "react-bootstrap";
 import "./Advantage.css";
 
 const advantageBoxes = [
-  { value: "75%", label: "React" },
-  { value: "65%", label: "Node.js" },
-  { value: "80%", label: "HTML/CSS" },
-  { value: "75%", label: "JavaScript" },
-  { value: "75%", label: "Tailwind CSS" },
-  { value: "50%", label: "Database" },
+  { value: 75, label: "React" },
+  { value: 75, label: "JavaScript" },
+  { value: 80, label: "HTML/CSS" },
+  { value: 75, label: "Tailwind CSS" },
+  { value: 65, label: "Node.js" },
+  { value: 50, label: "Database" },
 ];
 
 const Advantage = () => {
+  const [animatedValues, setAnimatedValues] = useState(
+    advantageBoxes.map(() => 25) // start all from 25
+  );
+  const sectionRef = useRef(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting && !hasAnimated) {
+          animateValues();
+          setHasAnimated(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, [hasAnimated]);
+
+  const animateValues = () => {
+    advantageBoxes.forEach((box, index) => {
+      let start = 25;
+      const end = box.value;
+      const duration = 1500; // 1.5 sec
+      const increment = (end - start) / (duration / 20); // update every 20ms
+
+      const timer = setInterval(() => {
+        start += increment;
+        if (start >= end) {
+          start = end;
+          clearInterval(timer);
+        }
+        setAnimatedValues((prev) => {
+          const newValues = [...prev];
+          newValues[index] = Math.round(start);
+          return newValues;
+        });
+      }, 20);
+    });
+  };
+
   return (
-    <Container fluid className="adv-fluid">
+    <Container fluid className="adv-fluid" ref={sectionRef}>
       <Container className="adv-container">
         {/* Left Section */}
         <div className="adv-left-section">
@@ -23,7 +72,7 @@ const Advantage = () => {
               years of professional experience
             </p>
             <div className="adv-left-small-box">
-              <p>95% client satisfaction.</p>
+              <p><span style={{ fontSize: "32px", fontWeight: "600" }}>95%</span> client satisfaction.</p>
             </div>
           </div>
         </div>
@@ -43,7 +92,7 @@ const Advantage = () => {
           <div className="adv-boxes-div">
             {advantageBoxes.map((box, index) => (
               <div key={index} className="adv-box">
-                <p>{box.value}</p>
+                <p>{animatedValues[index]}%</p>
                 <p>{box.label}</p>
               </div>
             ))}

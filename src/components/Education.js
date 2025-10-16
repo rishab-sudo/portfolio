@@ -4,19 +4,19 @@ import "./Education.css";
 
 const Education = () => {
   const workData = [
-    { 
-      years: "2021–2022", 
-      logo: "logo1.png", 
+    {
+      years: "2021–2022",
+      logo: "logo1.png",
       profile: `Freelance Frontend Developer <br> <span>Freelancing </span>`
     },
-    { 
-      years: "2022–2023", 
-      logo: "logo2.png", 
+    {
+      years: "2022–2023",
+      logo: "logo2.png",
       profile: `React.js Developer <br> <span>ShivNetra Tech Solutions</span>`
     },
-    { 
-      years: "2023–Present", 
-      logo: "logo3.png", 
+    {
+      years: "2023–Present",
+      logo: "logo3.png",
       profile: `Full-Stack Developer & Product Lead <br> <span>Reclame Hub Marketing Agency</span>`
     },
   ];

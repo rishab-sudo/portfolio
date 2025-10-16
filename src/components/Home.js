@@ -46,14 +46,17 @@ const Home = () => {
     <div className="home-banner">
       <div className="overlay"></div>
       <Container className="home-content">
-        <div className="banner-left">
-          <p className="banner-heading">Hello,</p>
-          <p className="banner-heading">I am Ronald.</p>
-          <p className="banner-subheading">UI/UX Designer</p>
-          <p className="page-text">
-            Must explain how all this mistaken idea denouncing pleasure and expound the actual system.
-          </p>
-        </div>
+      <div className="banner-left">
+  <p className="banner-heading">Hello,</p>
+  <p className="banner-heading">I'am <span className="highlight">Rishab Dutt</span>.</p>
+  <p className="banner-subheading">Full Stack Developer</p>
+  <p className="page-text">
+    I specialize in building high-performance, scalable, and user-focused web applications. 
+    With expertise across both front-end and back-end technologies, I transform ideas into 
+    seamless digital experiences that drive impact.
+  </p>
+</div>
+
 
         {/* Circular Logos on Desktop */}
         <div className="circle-container">

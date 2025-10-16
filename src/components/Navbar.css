@@ -22,12 +22,15 @@
 }
 
 /* ===== Logo ===== */
-.logo {
+.nav-logo {
   color: #fff;
   font-size: 22px;
   font-weight: 700;
+  padding: 5px 0px;
 }
-
+.nav-logo img {
+max-width: 100%;
+}
 /* ===== Nav Links ===== */
 .nav-links {
   display: flex;
@@ -43,17 +46,37 @@
 }
 
 .nav-links a {
+  position: relative;
+  /* Needed for ::after positioning */
+  display: inline-block;
+  /* Fix width issues */
   color: #fff;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
-  transition: color 0.3s ease;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #902724;
+/* Underline pseudo-element */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* Align exactly at the text bottom */
+  width: 0;
+  height: 2px;
+  background-color: #003366;
+  transition: width 0.3s ease;
 }
+
+/* Hover animation */
+.nav-links a:hover::after {
+  width: 100%;
+  /* Expand underline to full width */
+}
+
 
 /* ===== Hamburger Menu (Mobile) ===== */
 .hamburger {
@@ -62,13 +85,27 @@
   color: #fff;
   cursor: pointer;
 }
+.resume-btn {
+  padding: 0.5rem 1.6rem;
+  background-color: #003366; 
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px #000000;
+}
+
+.resume-btn:hover {
+/* background-color: #0055a5; */
+}
 
 /* ===== Mobile Menu ===== */
 @media screen and (max-width: 768px) {
   .nav-links {
     position: fixed;
     top: 70px;
-    left: -100%; /* 👈 start hidden from left */
+    left: -100%;
+    /* start hidden from left */
     flex-direction: column;
     background-color: #000;
     width: 80%;
@@ -76,11 +113,13 @@
     gap: 30px;
     padding-top: 3rem;
     align-items: center;
-    transition: left 0.3s ease; /* 👈 animate from left */
+    transition: left 0.3s ease;
+    /* animate from left */
   }
 
   .nav-links.open {
-    left: 0; /* 👈 slide in from left */
+    left: 0;
+    /* slide in from left */
   }
 
   .hamburger {

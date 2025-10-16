@@ -9,22 +9,22 @@ import Navbar from './components/Navbar';
 import Home from "./components/Home"
 import Advantage from './components/Advantage';
 import Worked from './components/Education';
-import RecentWork from"./components/RecentWork"
+import RecentWork from "./components/RecentWork"
+import Footer from './components/Footer';
 
 
 function App() {
 
   return (
-  
+
     <Router>
       <div className="App">
-       
-    <Navbar/>
- <Home/>
- <Advantage/>
-
- <Worked/>
- <RecentWork/>
+        <Navbar />
+         <Home />
+        <Advantage />
+         <Worked />
+        <RecentWork />
+        <Footer />
       </div>
     </Router>
 

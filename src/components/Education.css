@@ -19,10 +19,10 @@
   margin: 0 auto;
   border-collapse: collapse;
   display: table;
-  background: #fff; 
-  border-radius: 10px; 
-  overflow: hidden; 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -47,6 +47,7 @@
 .Education-row.header {
   font-weight: bold;
   background-color: #f0f0f0;
+  /* background-color: #003366; */
 }
 
 /* Logo styling */
@@ -60,6 +61,7 @@
 .Education-cell:not(:last-child) {
   border-right: none;
 }
+
 .Education-profile {
   font-weight: 600;
   font-size: 1rem;

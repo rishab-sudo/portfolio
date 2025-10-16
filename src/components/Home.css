@@ -31,6 +31,8 @@
 
 .banner-left {
   max-width: 600px;
+  text-align: left;
+  margin-right: auto;
 }
 
 .banner-heading {
@@ -72,7 +74,7 @@
   position: absolute;
   width: 80px; 
   height: 80px;
-  background: rgba(169, 169, 169, 0.445); 
+  /* background: rgba(169, 169, 169, 0.445);  */
   display: flex;
   align-items: center;
   justify-content: center;
