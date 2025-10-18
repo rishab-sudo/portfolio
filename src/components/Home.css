@@ -63,6 +63,26 @@
   z-index: 2;
 }
 
+/* Center Text */
+.circle-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px 25px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 51, 102, 0.6);
+  backdrop-filter: blur(3px);
+}
+
+
 .circle {
   position: relative;
   width: 100%;
@@ -105,11 +125,32 @@
 }
 
 @media screen and (max-width: 768px) {
-    .home-banner {
-      height: fit-content !important;
+  .home-banner {
+    height: fit-content !important;
     max-height: auto;
-    padding: 3rem 1rem; /* smaller padding on mobile */
+    padding: 45px 15px; 
   }
+  .home-content {
+  width: 100%;
+}
+
+.banner-left {
+  width: 100%;
+  text-align: left;
+  margin: auto;
+}
+
+.banner-heading {
+  font-size: 42px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.banner-subheading {
+  font-size: 28px;
+  color: #ddd;
+}
+
   .circle-container {
     display: none;
   }
@@ -126,21 +167,24 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
-    margin: 0 10px; /* <-- gap between boxes */
+    margin: auto; 
+    min-width: fit-content;
+    height: auto;
   }
 
   .slider-logo img {
-    width: 60%;
-    height: 60%;
+    padding: 2px;
+    width: 45px;
+    height: 45px;
     object-fit: contain;
   }
 
   /* Remove Slick's default padding on slides */
   .slick-slide > div {
-    margin: 0 10px; /* ensures gap between slides works correctly */
+    margin: 0 10px; 
   }
 
   .slick-list {
-    margin: 0 -10px; /* prevent extra space on edges */
+    margin: 0 -10px; 
   }
 }

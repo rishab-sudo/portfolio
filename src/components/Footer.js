@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footer-left">
           <div className="footer-brand">
             <img
-              src= {require("../assets/logo-prsn.png")}
+              src={require("../assets/logo-prsn.png")}
               alt="Brand Logo"
               className="footer-logo"
             />
@@ -21,9 +21,9 @@ const Footer = () => {
             </div>
           </div>
           <p className="footer-desc">
-         I’m a passionate Full Stack Developer dedicated to building impactful digital solutions.
-With expertise in web development, digital marketing, and SEO,
-I help businesses grow online through performance-driven and visually engaging web experiences.
+            I’m a passionate Full Stack Developer dedicated to building impactful digital solutions.
+            With expertise in web development, digital marketing, and SEO,
+            I help businesses grow online through performance-driven and visually engaging web experiences.
           </p>
 
           <div className="footer-socials">
@@ -38,7 +38,7 @@ I help businesses grow online through performance-driven and visually engaging w
               <FaLinkedin />
             </a>
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/7037923696"
               target="_blank"
               rel="noreferrer"
             >
@@ -51,8 +51,8 @@ I help businesses grow online through performance-driven and visually engaging w
         <div className="footer-center">
           <a href="#home">Home</a>
           <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          <a href="#experience">Experience</a>
+          <a href="#recentWork">Projects</a>
         </div>
 
         {/* Right Section */}
@@ -64,7 +64,7 @@ I help businesses grow online through performance-driven and visually engaging w
         <p>© {new Date().getFullYear()} Dexterity. All Rights Reserved.</p>
       </div>
     </Container>
-  );
+  ); 
 };
 
 export default Footer;

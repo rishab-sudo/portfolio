@@ -1,58 +1,98 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import Slider from "react-slick";
 import "./Education.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const Education = () => {
-  const workData = [
+const Experience = () => {
+  const experiences = [
     {
-      years: "2021–2022",
-      logo: "logo1.png",
-      profile: `Freelance Frontend Developer <br> <span>Freelancing </span>`
+       logo: require("../assets/up-work.png"),
+      company: "Upwork - Freelancing",
+      roleType: "Freelance",
+      responsibilities: [
+        "Developed responsive front-end interfaces using React.js and CSS.",
+        "Integrated APIs for smooth data handling and interactions.",
+        "Delivered 10+ client projects on time with pixel-perfect design.",
+        "Ensured performance optimization and browser compatibility.",
+        "Maintained clean, reusable component structure."
+      ],
     },
     {
-      years: "2022–2023",
-      logo: "logo2.png",
-      profile: `React.js Developer <br> <span>ShivNetra Tech Solutions</span>`
+      logo: require("../assets/navicon11.png"),
+      company: "ReclameHub Marketing Agency",
+      roleType: "Full Time",
+      responsibilities: [
+        "Worked as Full Stack Developer managing a small development team.",
+        "Built scalable web applications using React, Node.js, and MongoDB.",
+        "Achieved 95% client satisfaction rate across multiple projects.",
+        "Integrated Redux for predictable and efficient state management.",
+        "Handled deployment and production optimization tasks."
+      ],
     },
     {
-      years: "2023–Present",
-      logo: "logo3.png",
-      profile: `Full-Stack Developer & Product Lead <br> <span>Reclame Hub Marketing Agency</span>`
+      logo: require("../assets/ShivNetra-logo.png"),
+      company: "ShivNetra Tech Solutions",
+      roleType: "Full Time",
+      responsibilities: [
+        "Worked on 'Proxyy' project, managing all front-end development.",
+        "Developed AI-based interview panel UI using React and Tailwind.",
+        "Handled API integration and advanced data visualization.",
+        "Collaborated with backend team for seamless integration.",
+        "Delivered fully customized user interfaces as per client needs."
+      ],
     },
   ];
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 700,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: { slidesToShow: 2 },
+      },
+      {
+        breakpoint: 768,
+        settings: { slidesToShow: 1 },
+      },
+    ],
+  };
+
   return (
-    <div className="Education-container">
-      <h2 className="Education-heading">My Work Experience</h2>
-      <p className="Education-subheading">Here’s where I’ve contributed</p>
+    <div className="experience-section" id="experience"> 
+      <h2 className="experience-title">My Work Experience</h2>
+      <p className="experience-subtitle">Where I’ve contributed professionally</p>
 
-      <Container className="Education-table">
-        <div className="Education-row header">
-          <div className="Education-cell">Years</div>
-          <div className="Education-cell">Company Logo</div>
-          <div className="Education-cell">Profile</div>
-        </div>
+      <Slider {...settings} className="experience-slider">
+        {experiences.map((exp, index) => (
+          <div key={index}>
+            <div className="experience-card">
+              <div className="experience-header">
+                <img src={exp.logo} alt={exp.company} className="company-logo" />
+                <h3 className="company-name">{exp.company}</h3>
+              </div>
 
-        {workData.map((item, index) => (
-          <div className="Education-row" key={index}>
-            <div className="Education-cell">{item.years}</div>
-            <div className="Education-cell">
-              <img
-                src={item.logo}
-                alt="Company Logo"
-                className="Education-logo"
-              />
+              <p className="role-type">{exp.roleType}</p>
+
+              <h4 className="responsibilities-title">Responsibilities</h4>
+              <ul className="responsibilities-list">
+                {exp.responsibilities.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
             </div>
-            {/* ✅ Render HTML correctly */}
-            <div
-              className="Education-cell Education-profile"
-              dangerouslySetInnerHTML={{ __html: item.profile }}
-            ></div>
           </div>
         ))}
-      </Container>
+      </Slider>
     </div>
   );
 };
 
-export default Education;
+export default Experience;

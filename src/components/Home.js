@@ -43,7 +43,7 @@ const Home = () => {
   };
 
   return (
-    <div className="home-banner">
+    <Container fluid id="home" className="home-banner">
       <div className="overlay"></div>
       <Container className="home-content">
       <div className="banner-left">
@@ -57,20 +57,24 @@ const Home = () => {
   </p>
 </div>
 
+{/* Circular Logos on Desktop */}
+      <div className="circle-container">
+  <div className="circle">
+    {logos.map((logo, index) => (
+      <img
+        key={index}
+        src={logo.src}
+        alt={logo.alt}
+        className={`circle-logo logo-${index + 1}`}
+      />
+    ))}
+  </div>
+  {/* Center Text */}
+  <div className="circle-center-text">
+    <p>Tools & <br />Technologies</p>
+  </div>
+</div>
 
-        {/* Circular Logos on Desktop */}
-        <div className="circle-container">
-          <div className="circle">
-            {logos.map((logo, index) => (
-              <img
-                key={index}
-                src={logo.src}
-                alt={logo.alt}
-                className={`circle-logo logo-${index + 1}`}
-              />
-            ))}
-          </div>
-        </div>
 
         {/* Slick Slider for Mobile */}
         <div className="slick-mobile">
@@ -83,7 +87,7 @@ const Home = () => {
           </Slider>
         </div>
       </Container>
-    </div>
+    </Container>
   );
 };
 

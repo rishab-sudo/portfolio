@@ -1,77 +1,127 @@
-.Education-container {
+.experience-section {
+  padding: 60px 40px;
+  background-color: #f9fafc;
   text-align: center;
-  padding: 2rem;
 }
 
-.Education-heading {
+.experience-title {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.Education-subheading {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  color: gray;
-}
-
-.Education-table {
-  width: 90%;
-  margin: 0 auto;
-  border-collapse: collapse;
-  display: table;
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-
-.Education-row {
-  display: table-row;
-  /* border-bottom: 1px solid #ccc; */
-}
-
-.Education-row:last-child {
-  border-bottom: none;
-}
-
-.Education-cell {
-  display: table-cell;
-  padding: 1rem;
-  font-weight: 600;
-  text-align: center;
-  vertical-align: middle;
-}
-
-/* Header styling */
-.Education-row.header {
-  font-weight: bold;
-  background-color: #f0f0f0;
-  /* background-color: #003366; */
-}
-
-/* Logo styling */
-.Education-logo {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
-
-/* Remove all vertical lines */
-.Education-cell:not(:last-child) {
-  border-right: none;
-}
-
-.Education-profile {
-  font-weight: 600;
-  font-size: 1rem;
-  color: #333;
-}
-
-.Education-profile span {
-  display: block;
   font-weight: 700;
+  color: #003366;
+}
+
+.experience-subtitle {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.experience-slider {
+  padding: 10px;
+}
+
+/* Card Styling */
+.experience-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  margin: 10px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Header (Logo + Company Name) */
+.experience-header {
+width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.company-logo {
+  width: 75px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: contain;
+
+}
+
+.company-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Role Type Badge */
+.role-type {
+  width: fit-content;
+  display: inline-block;
+  margin: 10px 0 15px;
+  background: #003366;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
   font-size: 0.9rem;
-  /* color: #007bff; */
-  margin-top: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsibilities */
+.responsibilities-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #003366;
+  margin-bottom: 8px;
+}
+
+.responsibilities-list {
+  list-style: disc;
+  padding-left: 20px;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Slick adjustments */
+.slick-slide {
+  padding: 10px;
+}
+
+.slick-dots li button:before {
+  color: #003366 !important;
+  font-size: 10px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #003366 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience-slider{
+    width: 100% !important;
+  }
+  .experience-card {
+    min-width: 95% !important;
+    height: auto;
+    text-align: center;
+  }
+
+  .experience-header {
+    justify-content: center;
+  }
+
+  .responsibilities-list {
+    text-align: left;
+    display: inline-block;
+  }
 }

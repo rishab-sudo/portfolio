@@ -23,7 +23,7 @@ function App() {
          <Home />
         <Advantage />
          <Worked />
-        <RecentWork />
+        <RecentWork  />
         <Footer />
       </div>
     </Router>

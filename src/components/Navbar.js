@@ -15,32 +15,31 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* LOGO */}
         <div className="nav-logo">
-<img   src= {require("../assets/logo-prsn.png")} alt=""/>
+          <img src={require("../assets/logo-prsn.png")} alt="" />
         </div>
 
         {/* NAV LINKS */}
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-          <li><ScrollLink to="home" smooth={true} duration={600} offset={-80} onClick={closeMenu}>Home</ScrollLink></li>
-          <li><ScrollLink to="about" smooth={true} duration={600} offset={-80} onClick={closeMenu}>About</ScrollLink></li>
-          <li><ScrollLink to="projects" smooth={true} duration={600} offset={-80} onClick={closeMenu}>Projects</ScrollLink></li>
-         
-
-          {/* RESUME BUTTON */}
-         <li>
-  <a 
-    href={ResumePDF} 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    className="resume-btn"
-    onClick={closeMenu}
-  >
-    Resume
-  </a>
-</li>
-
+          <li><ScrollLink to="home" duration={600} offset={-80} onClick={closeMenu}>Home</ScrollLink></li>
+          <li><ScrollLink to="about" duration={600} offset={-80} onClick={closeMenu}>About</ScrollLink></li>
+          <li><ScrollLink to="experience" duration={600} offset={-80} onClick={closeMenu}>Experience</ScrollLink></li>
+          <li><ScrollLink to="recentWork" duration={600} offset={-80} onClick={closeMenu}>Projects</ScrollLink></li>
+    {/* RESUME BUTTON */}
+          <li>
+            <a
+              href={ResumePDF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="resume-btn"
+              onClick={closeMenu}
+            >
+              Resume
+            </a>
+          </li>
         </ul>
 
-        {/* HAMBURGER ICON */}
+
+      {/* HAMBURGER ICON */}
         <div className="hamburger" onClick={toggleMenu}>
           {menuOpen ? <FaTimes /> : <FaBars />}
         </div>

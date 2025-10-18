@@ -62,7 +62,7 @@ const Advantage = () => {
   };
 
   return (
-    <Container fluid className="adv-fluid" ref={sectionRef}>
+    <Container fluid className="adv-fluid" ref={sectionRef} id="about">
       <Container className="adv-container">
         {/* Left Section */}
         <div className="adv-left-section">
@@ -82,10 +82,10 @@ const Advantage = () => {
           <div className="adv-heading-div">
             <h2>My Advantage</h2>
             <p>
-              Must explain to you how all this mistaken idea of denouncing
-              pleasure and praising pain was born and I will give you a complete
-              account of the system and expound the actual and praising pain
-              was born.
+             My expertise lies in these technologies
+    With these skills, I build modern, efficient, and scalable web applications. 
+    I take pride in writing clean, maintainable code that works seamlessly in real-world projects, 
+    ensuring smooth user experiences and professional results every time.
             </p>
           </div>
 

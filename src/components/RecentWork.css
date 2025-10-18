@@ -4,12 +4,11 @@
   margin: auto;
   position: relative;
   scroll-margin-top: 150px;
-  /* Makes section align properly when navigated to */
 }
 
 .work-heading-div {
   position: sticky;
-  top: 80px;
+  top: 95px;
   /* Keep heading visible below navbar */
   z-index: 5;
   margin-bottom: 20px;
@@ -18,7 +17,7 @@
 /* Sticky section cards */
 .stack-section-card {
   position: sticky;
-  top: 150px;
+  top: 165px;
   /* Ensure cards start 150px below navbar */
   width: 100%;
   margin: auto;
@@ -44,9 +43,9 @@
   top: 175px;
   transition: all 0.5s ease;
   transform: scale(1);
-}
+  }
 
-.overlap-card-content {
+  .overlap-card-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -54,26 +53,23 @@
   width: 100%;
   padding: 20px;
 }
-
 .overlap-card-img {
   max-width: 100% !important;
   max-height: 500px;
   object-fit: contain;
   border-radius: 10px;
 }
-
 .overlap-card-title {
   text-align: center;
   width: 50%;
   font-size: 20px;
   font-weight: 600;
-  margin-top: 1.2rem;
-  background: linear-gradient(90deg, rgba(234, 49, 56, 1) 0%, rgba(0, 0, 0, 1) 90%);
-  -webkit-background-clip: text;
+  margin-top: 1.5rem;
+background: linear-gradient(90deg, rgba(0, 15, 40, 0.7) 0%, rgba(0, 0, 0, 0.8) 100%);
+-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
-
 /* Highlight effect */
 .lift {
   transform: scale(1.05) translateY(-10px);
@@ -111,13 +107,15 @@
     padding: 20px;
     gap: 25px;
   }
-
   .overlap-card-img {
     width: 100%;
     height: auto;
     object-fit: contain;
     border-radius: 10px 10px 0 0;
   }
+  .overlap-card-title {
+width: 100% !important;
+}
 
   .overlap-card-text {
     width: 100%;
