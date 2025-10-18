@@ -36,7 +36,7 @@ const Home = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
         },
       },
     ],
@@ -46,34 +46,34 @@ const Home = () => {
     <Container fluid id="home" className="home-banner">
       <div className="overlay"></div>
       <Container className="home-content">
-      <div className="banner-left">
-  <p className="banner-heading">Hello,</p>
-  <p className="banner-heading">I'am <span className="highlight">Rishab Dutt</span>.</p>
-  <p className="banner-subheading">Full Stack Developer</p>
-  <p className="page-text">
-    I specialize in building high-performance, scalable, and user-focused web applications. 
-    With expertise across both front-end and back-end technologies, I transform ideas into 
-    seamless digital experiences that drive impact.
-  </p>
-</div>
+        <div className="banner-left">
+          <p className="banner-heading">Hello,</p>
+          <p className="banner-heading">I'am <span className="highlight">Rishab Dutt</span>.</p>
+          <p className="banner-subheading">Full Stack Developer</p>
+          <p className="page-text">
+            I specialize in building high-performance, scalable, and user-focused web applications.
+            With expertise across both front-end and back-end technologies, I transform ideas into
+            seamless digital experiences that drive impact.
+          </p>
+        </div>
 
-{/* Circular Logos on Desktop */}
-      <div className="circle-container">
-  <div className="circle">
-    {logos.map((logo, index) => (
-      <img
-        key={index}
-        src={logo.src}
-        alt={logo.alt}
-        className={`circle-logo logo-${index + 1}`}
-      />
-    ))}
-  </div>
-  {/* Center Text */}
-  <div className="circle-center-text">
-    <p>Tools & <br />Technologies</p>
-  </div>
-</div>
+        {/* Circular Logos on Desktop */}
+        <div className="circle-container">
+          <div className="circle">
+            {logos.map((logo, index) => (
+              <img
+                key={index}
+                src={logo.src}
+                alt={logo.alt}
+                className={`circle-logo logo-${index + 1}`}
+              />
+            ))}
+          </div>
+          {/* Center Text */}
+          <div className="circle-center-text">
+            <p>Tools & <br />Technologies</p>
+          </div>
+        </div>
 
 
         {/* Slick Slider for Mobile */}

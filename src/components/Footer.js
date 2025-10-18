@@ -27,24 +27,31 @@ const Footer = () => {
           </p>
 
           <div className="footer-socials">
-            <a href="https://www.naukri.com" target="_blank" rel="noreferrer">
-              <FaBriefcase />
-            </a>
+            {/* <a
+    href="https://www.naukri.com"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <FaBriefcase />
+  </a> */}
+
             <a
-              href="https://www.linkedin.com/in/rishab-dutt"
+              href="https://www.linkedin.com/in/rishab-dutt-865874206/"
               target="_blank"
               rel="noreferrer"
             >
               <FaLinkedin />
             </a>
+
             <a
-              href="https://wa.me/7037923696"
+              href="https://wa.me/917037923696"
               target="_blank"
               rel="noreferrer"
             >
               <FaWhatsapp />
             </a>
           </div>
+
         </div>
 
         {/* Center Section */}
@@ -57,14 +64,24 @@ const Footer = () => {
 
         {/* Right Section */}
         <div className="footer-right">
-          <button className="contact-btn">Contact </button>
+          <button
+            className="contact-btn"
+            onClick={() =>
+              window.open(
+                "https://wa.me/917037923696?text=Hello%20Rishab%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect.",
+                "_blank"
+              )
+            }
+          >
+            Contact
+          </button>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Dexterity. All Rights Reserved.</p>
+        <p>© {new Date().getFullYear()} All Rights Reserved.</p>
       </div>
     </Container>
-  ); 
+  );
 };
 
 export default Footer;

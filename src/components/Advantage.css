@@ -126,6 +126,7 @@
 .adv-right-div {
     margin: auto;
 width: 95%;
+text-align: justify;
 }
   .adv-boxes-div {
     grid-template-columns: repeat(2, 1fr);

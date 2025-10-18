@@ -81,6 +81,7 @@ background: linear-gradient(90deg, rgba(0, 15, 40, 0.7) 0%, rgba(0, 0, 0, 0.8) 1
   .stack-section {
     background: #000;
     margin: auto;
+    margin-top: 6.5% !important;
   }
 
   .stack-section-card {
