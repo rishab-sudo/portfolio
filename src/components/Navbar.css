@@ -112,7 +112,7 @@ max-width: 100%;
     height: 100vh;
     gap: 30px;
     padding-top: 3rem;
-    align-items: center;
+    align-items: flex-start;
     transition: left 0.3s ease;
     /* animate from left */
   }

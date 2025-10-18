@@ -47,7 +47,6 @@ width: 100%;
   justify-content: flex-start;
   gap: 12px;
 }
-
 .company-logo {
   width: 75px;
   height: 80px;
@@ -55,7 +54,6 @@ width: 100%;
   object-fit: contain;
 
 }
-
 .company-name {
   font-size: 1.1rem;
   font-weight: 600;
@@ -107,21 +105,69 @@ width: 100%;
 
 /* Responsive */
 @media (max-width: 768px) {
-  .experience-slider{
+  .experience-section {
+  padding: 15px 7px;
+  margin: auto;
+  background-color: #f9fafc;
+  text-align: center;
+}
+.experience-subtitle {
+  margin-bottom: 15px;
+}
+  .experience-slider {
     width: 100% !important;
-  }
-  .experience-card {
-    min-width: 95% !important;
-    height: auto;
-    text-align: center;
+    padding: 0;
   }
 
+  .experience-card {
+    min-width: 100% !important;
+    height: auto;
+    text-align: center !important;
+    padding: 20px;
+  }
+
+  /* Stack logo above company name */
   .experience-header {
-    justify-content: center;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .company-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .company-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+    margin-top: -18px;
+  }
+
+  /* Role Type right below name */
+  .role-type {
+    margin: 8px auto 12px;
+    display: inline-block;
+  }
+
+  .responsibilities-title {
+    margin-top: 10px;
+    font-size: 1rem;
   }
 
   .responsibilities-list {
-    text-align: left;
-    display: inline-block;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    display: block;
+  }
+
+  .responsibilities-list li {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    color: #444;
   }
 }
