@@ -44,26 +44,32 @@ const Experience = () => {
     },
   ];
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 700,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: true,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: { slidesToShow: 2 },
-      },
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 1 },
-      },
-    ],
-  };
+ const settings = {
+  dots: true,
+  infinite: true,
+  speed: 700,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  pauseOnHover: true,
+  variableWidth: false,  // important for mobile sliding
+  responsive: [
+    {
+      breakpoint: 1024, // tablets
+      settings: { slidesToShow: 2 },
+    },
+    {
+      breakpoint: 768,  // mobile
+      settings: { slidesToShow: 1 },
+    },
+    {
+      breakpoint: 480,  // small mobile
+      settings: { slidesToShow: 1 },
+    },
+  ],
+};
+
 
   return (
     <div className="experience-section" id="experience"> 
