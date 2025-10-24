@@ -97,6 +97,7 @@
 @media (max-width: 768px) {
   .adv-fluid {
   padding: 2rem 0;
+  margin-top: 2.5%;
 }
   .adv-container {
   display: flex;
