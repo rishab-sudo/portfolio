@@ -1,47 +1,55 @@
-.App{
+.App {
     margin-top: 60px;
     background-color: #33333310;
     height: 100%;
     font-family: poppins !important;
 }
-.page-heading{
+
+.page-heading {
     font-size: 32px;
     font-family: poppins;
 }
-.sub-heading{
+
+.sub-heading {
     font-size: 24px;
     font-weight: 600;
 }
+
 .special-heading {
     font-weight: 700;
-    display: inline-block; 
-    padding: 0px;  
-    background-color: #fff; 
+    display: inline-block;
+    padding: 0px;
+    background-color: #fff;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 30px;    */
 }
-.page-text{
+
+.page-text {
     font-size: 18px;
 }
+
 @media (max-width: 768px) {
 
-   .page-heading{
-    font-size: 28px;
-    
-}
-.sub-heading{
-    font-size: 24px;
-    font-weight: 600;
-}
-.special-heading {
-    font-weight: 700;
-    display: inline-block; 
-    padding: 0px;  
-    background-color: #fff; 
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    .page-heading {
+        font-size: 28px;
+
+    }
+
+    .sub-heading {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .special-heading {
+        font-weight: 700;
+        display: inline-block;
+        padding: 0px;
+        background-color: #fff;
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 30px;    */
-} 
-.page-text{
-    font-size: 16px;
-}
+    }
+
+    .page-text {
+        font-size: 16px;
+    }
 }

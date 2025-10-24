@@ -39,8 +39,8 @@ const Experience = () => {
         "Developed AI-based interview panel UI using React and Tailwind.",
         "Handled API integration and advanced data visualization.",
         "Collaborated with backend team for seamless integration.",
-        "Delivered fully customized user interfaces as per client needs."
-      ],
+        "Delivered fully customized user interfaces as per client needs.",
+       ],
     },
   ];
 
@@ -80,7 +80,6 @@ const Experience = () => {
               </div>
 
               <p className="role-type">{exp.roleType}</p>
-
               <h4 className="responsibilities-title">Responsibilities</h4>
               <ul className="responsibilities-list">
                 {exp.responsibilities.map((item, i) => (

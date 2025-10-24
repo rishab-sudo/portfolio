@@ -13,8 +13,9 @@ const advantageBoxes = [
 
 const Advantage = () => {
   const [animatedValues, setAnimatedValues] = useState(
-    advantageBoxes.map(() => 25) // start all from 25
+    advantageBoxes.map(() => 25)
   );
+  const [clientSatisfaction, setClientSatisfaction] = useState(0);
   const sectionRef = useRef(null);
   const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -24,16 +25,14 @@ const Advantage = () => {
         const entry = entries[0];
         if (entry.isIntersecting && !hasAnimated) {
           animateValues();
+          animateClientSatisfaction();
           setHasAnimated(true);
         }
       },
       { threshold: 0.3 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current);
     return () => {
       if (sectionRef.current) observer.unobserve(sectionRef.current);
     };
@@ -43,8 +42,8 @@ const Advantage = () => {
     advantageBoxes.forEach((box, index) => {
       let start = 25;
       const end = box.value;
-      const duration = 1500; // 1.5 sec
-      const increment = (end - start) / (duration / 20); // update every 20ms
+      const duration = 1500;
+      const increment = (end - start) / (duration / 20);
 
       const timer = setInterval(() => {
         start += increment;
@@ -61,6 +60,23 @@ const Advantage = () => {
     });
   };
 
+  // 🎯 Animate 95% client satisfaction
+  const animateClientSatisfaction = () => {
+    let start = 0;
+    const end = 95;
+    const duration = 1500;
+    const increment = (end - start) / (duration / 20);
+
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= end) {
+        start = end;
+        clearInterval(timer);
+      }
+      setClientSatisfaction(Math.round(start));
+    }, 20);
+  };
+
   return (
     <Container fluid className="adv-fluid" ref={sectionRef} id="about">
       <Container className="adv-container">
@@ -72,7 +88,18 @@ const Advantage = () => {
               years of professional experience
             </p>
             <div className="adv-left-small-box">
-              <p><span style={{ fontSize: "32px", fontWeight: "600" }}>95%</span> client satisfaction.</p>
+              <p>
+                <span
+                  style={{
+                    fontSize: "32px",
+                    fontWeight: "600",
+                    transition: "all 0.3s ease",
+                  }}
+                >
+                  {clientSatisfaction}%
+                </span>{" "}
+                client satisfaction.
+              </p>
             </div>
           </div>
         </div>
@@ -82,10 +109,11 @@ const Advantage = () => {
           <div className="adv-heading-div">
             <h2>My Advantage</h2>
             <p>
-             My expertise lies in these technologies
-    With these skills, I build modern, efficient, and scalable web applications. 
-    I take pride in writing clean, maintainable code that works seamlessly in real-world projects, 
-    ensuring smooth user experiences and professional results every time.
+              My expertise lies in these technologies. With these skills, I build
+              modern, efficient, and scalable web applications. I take pride in
+              writing clean, maintainable code that works seamlessly in
+              real-world projects, ensuring smooth user experiences and
+              professional results every time.
             </p>
           </div>
 
