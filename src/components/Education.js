@@ -42,6 +42,42 @@ const Experience = () => {
         "Delivered fully customized user interfaces as per client needs.",
        ],
     },
+        {
+       logo: require("../assets/up-work.png"),
+      company: "Upwork - Freelancing",
+      roleType: "Freelance",
+      responsibilities: [
+        "Developed responsive front-end interfaces using React.js and CSS.",
+        "Integrated APIs for smooth data handling and interactions.",
+        "Delivered 10+ client projects on time with pixel-perfect design.",
+        "Ensured performance optimization and browser compatibility.",
+        "Maintained clean, reusable component structure."
+      ],
+    },
+    {
+      logo: require("../assets/navicon11.png"),
+      company: "ReclameHub Marketing Agency",
+      roleType: "Full Time",
+      responsibilities: [
+        "Worked as Full Stack Developer managing a small development team.",
+        "Built scalable web applications using React, Node.js, and MongoDB.",
+        "Achieved 95% client satisfaction rate across multiple projects.",
+        "Integrated Redux for predictable and efficient state management.",
+        "Handled deployment and production optimization tasks."
+      ],
+    },
+    {
+      logo: require("../assets/ShivNetra-logo.png"),
+      company: "ShivNetra Tech Solutions",
+      roleType: "Full Time",
+      responsibilities: [
+        "Worked on 'Proxyy' project, managing all front-end development.",
+        "Developed AI-based interview panel UI using React and Tailwind.",
+        "Handled API integration and advanced data visualization.",
+        "Collaborated with backend team for seamless integration.",
+        "Delivered fully customized user interfaces as per client needs.",
+       ],
+    },
   ];
 
  const settings = {

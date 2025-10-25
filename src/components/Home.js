@@ -26,17 +26,24 @@ const Home = () => {
     cssEase: "linear",
     arrows: false,
     dots: false,
+    draggable: true,
+    swipeToSlide: true,
+    touchMove: true,
     responsive: [
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
+          draggable: true,
+          swipeToSlide: true,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 1,
+          draggable: true,
+          swipeToSlide: true,
         },
       },
     ],
