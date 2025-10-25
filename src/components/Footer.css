@@ -138,7 +138,12 @@
   .footer-brand {
     justify-content: flex-start;
   }
-
+.footer-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
   .footer-socials {
     justify-content: flex-start;
   }
