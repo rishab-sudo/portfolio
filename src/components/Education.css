@@ -116,7 +116,7 @@ width: 100%;
 }
   .experience-slider {
     width: 100% !important;
-    padding: 0;
+    padding: 2px;
   }
 
   .experience-card {
