@@ -99,6 +99,10 @@ const Experience = () => {
       breakpoint: 768,  // mobile
       settings: { slidesToShow: 1 },
     },
+      {
+      breakpoint: 576,  // small mobile
+      settings: { slidesToShow: 1 },
+    },
     {
       breakpoint: 480,  // small mobile
       settings: { slidesToShow: 1 },
