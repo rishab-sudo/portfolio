@@ -125,11 +125,18 @@
   margin-bottom: 0; 
 }
 .adv-right-div {
-    margin: auto;
+    margin: auto !important;
 width: 95%;
 text-align: justify;
+
+background-color: #003366;
 }
   .adv-boxes-div {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+
   }
+  .adv-box {
+  margin: auto;
+}
 }
