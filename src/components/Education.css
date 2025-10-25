@@ -106,7 +106,7 @@ width: 100%;
 /* Responsive */
 @media (max-width: 768px) {
   .experience-section {
-  padding: 15px 7px;
+  padding: 25px 7px;
   margin: auto;
   background-color: #f9fafc;
   text-align: center;
@@ -119,11 +119,11 @@ width: 100%;
     padding: 2px;
   }
 
-  .experience-card {
-    min-width: 100% !important;
+   .experience-card {
     height: auto;
-    text-align: center !important;
+    text-align: center;
     padding: 20px;
+    margin: 0 5px; /* gap thoda reduce */
   }
 
   /* Stack logo above company name */
