@@ -105,12 +105,18 @@ width: 100%;
 
 /* Responsive */
 @media (max-width: 768px) {
+    .slick-slide {
+    min-width: 100% !important;
+  }
   .experience-section {
   padding: 15px 7px;
   margin: auto;
   background-color: #f9fafc;
   text-align: center;
 }
+ .slick-track {
+    display: flex !important;
+  }
 .experience-subtitle {
   margin-bottom: 15px;
 }
@@ -118,13 +124,10 @@ width: 100%;
     width: 100% !important;
     padding: 0;
   }
-
   .experience-card {
-    min-width: 100% !important;
-    height: auto;
-    text-align: center !important;
-    padding: 20px;
-  }
+
+height: auto !important;
+}
 
   /* Stack logo above company name */
   .experience-header {
