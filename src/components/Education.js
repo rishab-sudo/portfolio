@@ -115,8 +115,8 @@ const Experience = () => {
     <div className="experience-section" id="experience"> 
       <h2 className="experience-title">My Work Experience</h2>
       <p className="experience-subtitle">Where I’ve contributed professionally</p>
-
-      <Slider {...settings} className="experience-slider">
+<div className="experience-slider">
+      <Slider {...settings} >
         {experiences.map((exp, index) => (
           <div key={index}>
             <div className="experience-card">
@@ -136,6 +136,7 @@ const Experience = () => {
           </div>
         ))}
       </Slider>
+      </div>
     </div>
   );
 };
