@@ -1,13 +1,14 @@
 import React from "react";
-import Slider from "react-slick";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/autoplay";
 import "./Education.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const Experience = () => {
   const experiences = [
     {
-       logo: require("../assets/up-work.png"),
+      logo: require("../assets/up-work.png"),
       company: "Upwork - Freelancing",
       roleType: "Freelance",
       responsibilities: [
@@ -15,7 +16,7 @@ const Experience = () => {
         "Integrated APIs for smooth data handling and interactions.",
         "Delivered 10+ client projects on time with pixel-perfect design.",
         "Ensured performance optimization and browser compatibility.",
-        "Maintained clean, reusable component structure."
+        "Maintained clean, reusable component structure.",
       ],
     },
     {
@@ -27,7 +28,7 @@ const Experience = () => {
         "Built scalable web applications using React, Node.js, and MongoDB.",
         "Achieved 95% client satisfaction rate across multiple projects.",
         "Integrated Redux for predictable and efficient state management.",
-        "Handled deployment and production optimization tasks."
+        "Handled deployment and production optimization tasks.",
       ],
     },
     {
@@ -40,62 +41,47 @@ const Experience = () => {
         "Handled API integration and advanced data visualization.",
         "Collaborated with backend team for seamless integration.",
         "Delivered fully customized user interfaces as per client needs.",
-       ],
+      ],
     },
   ];
 
- const settings = {
-  dots: true,
-  infinite: true,
-  speed: 700,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  pauseOnHover: true,
-  variableWidth: false,  // important for mobile sliding
-  responsive: [
-    {
-      breakpoint: 1024, // tablets
-      settings: { slidesToShow: 2 },
-    },
-    {
-      breakpoint: 768,  // mobile
-      settings: { slidesToShow: 1 },
-    },
-    {
-      breakpoint: 480,  // small mobile
-      settings: { slidesToShow: 1 },
-    },
-  ],
-};
-
-
   return (
-    <div className="experience-section" id="experience"> 
-      <h2 className="experience-title">My Work Experience</h2>
-      <p className="experience-subtitle">Where I’ve contributed professionally</p>
+    <div className="experience-section">
+      <h2 className="experience-title">Experience</h2>
 
-      <Slider {...settings} className="experience-slider">
+      <Swiper
+        modules={[Autoplay]}
+        autoplay={{ delay: 2500, disableOnInteraction: false }}
+        loop={true}
+        breakpoints={{
+          0: { slidesPerView: 1, spaceBetween: 20 },
+          768: { slidesPerView: 2, spaceBetween: 30 },
+          1024: { slidesPerView: 3, spaceBetween: 40 },
+        }}
+        style={{ padding: "20px 0" }}
+      >
         {experiences.map((exp, index) => (
-          <div key={index}>
+          <SwiperSlide key={index}>
             <div className="experience-card">
-              <div className="experience-header">
-                <img src={exp.logo} alt={exp.company} className="company-logo" />
-                <h3 className="company-name">{exp.company}</h3>
+              <div className="experience-logo-div">
+              <img
+                src={exp.logo}
+                alt={exp.company}
+                className="experience-logo-top"
+              />
               </div>
-
+              <h3 className="company-name">{exp.company}</h3>
               <p className="role-type">{exp.roleType}</p>
-              <h4 className="responsibilities-title">Responsibilities</h4>
-              <ul className="responsibilities-list">
+
+              <ul className="responsibility-list">
                 {exp.responsibilities.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
               </ul>
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </Slider>
+      </Swiper>
     </div>
   );
 };
