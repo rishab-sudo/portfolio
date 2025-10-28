@@ -88,4 +88,20 @@ padding: 15px ;
     text-align: left;
     display: inline-block;
   }
+  .swiper-pagination-bullet {
+  background: #003366; /* color of dots */
+  opacity: 0.4;
+  transition: opacity 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #007bff; /* active dot color */
+}
+
+.swiper-pagination {
+  margin-top: 20px;
+  position: relative !important;
+}
+
 }

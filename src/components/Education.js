@@ -1,8 +1,9 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
+import "swiper/css/pagination";
 import "./Education.css";
 
 const Experience = () => {
@@ -19,6 +20,18 @@ const Experience = () => {
         "Maintained clean, reusable component structure.",
       ],
     },
+       {
+      logo: require("../assets/ShivNetra-logo.png"),
+      company: "ShivNetra Tech Solutions",
+      roleType: "Full Time",
+      responsibilities: [
+        "Worked on 'Proxyy' project, managing all front-end development.",
+        "Developed AI-based interview panel UI using React and Tailwind.",
+        "Handled API integration and advanced data visualization.",
+        "Collaborated with backend team for seamless integration.",
+        "Delivered fully customized user interfaces as per client needs.",
+      ],
+    },
     {
       logo: require("../assets/navicon11.png"),
       company: "ReclameHub Marketing Agency",
@@ -31,18 +44,7 @@ const Experience = () => {
         "Handled deployment and production optimization tasks.",
       ],
     },
-    {
-      logo: require("../assets/ShivNetra-logo.png"),
-      company: "ShivNetra Tech Solutions",
-      roleType: "Full Time",
-      responsibilities: [
-        "Worked on 'Proxyy' project, managing all front-end development.",
-        "Developed AI-based interview panel UI using React and Tailwind.",
-        "Handled API integration and advanced data visualization.",
-        "Collaborated with backend team for seamless integration.",
-        "Delivered fully customized user interfaces as per client needs.",
-      ],
-    },
+ 
   ];
 
   return (
@@ -50,8 +52,9 @@ const Experience = () => {
       <h2 className="experience-title">Experience</h2>
 
       <Swiper
-        modules={[Autoplay]}
+        modules={[Autoplay, Pagination]}
         autoplay={{ delay: 2500, disableOnInteraction: false }}
+        pagination={{ clickable: true }}
         loop={true}
         breakpoints={{
           0: { slidesPerView: 1, spaceBetween: 20 },
@@ -64,15 +67,14 @@ const Experience = () => {
           <SwiperSlide key={index}>
             <div className="experience-card">
               <div className="experience-logo-div">
-              <img
-                src={exp.logo}
-                alt={exp.company}
-                className="experience-logo-top"
-              />
+                <img
+                  src={exp.logo}
+                  alt={exp.company}
+                  className="experience-logo-top"
+                />
               </div>
               <h3 className="company-name">{exp.company}</h3>
               <p className="role-type">{exp.roleType}</p>
-
               <ul className="responsibility-list">
                 {exp.responsibilities.map((item, i) => (
                   <li key={i}>{item}</li>
