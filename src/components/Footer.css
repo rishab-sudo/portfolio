@@ -145,6 +145,6 @@
   object-fit: cover;
 }
   .footer-socials {
-    justify-content: flex-start;
+    justify-content: center;
   }
 }
