@@ -48,7 +48,7 @@ const Experience = () => {
   ];
 
   return (
-    <div className="experience-section">
+    <div className="experience-section" id="experience">
       <h2 className="experience-title">Experience</h2>
 
       <Swiper
